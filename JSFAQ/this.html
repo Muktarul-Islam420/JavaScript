@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this keyword</title>
+</head>
+
+<body>
+    <h1>This is not confused anymore</h1>
+    <p onclick="this.innerText = 'You clicked me😉'">I'm paragraph.Don't click me🥱</p>
+    <script>
+        const person = {
+            name: 'Raihan',
+            getFullName: function() {
+                console.log(this)
+                return 'Mr. ' + this.name
+            }
+        }
+        const person2 = {
+            name: 'Abbas ali'
+        }
+        person2.getFullName = person.getFullName
+        console.log(person2.getFullName())
+    </script>
+</body>
+
+</html>

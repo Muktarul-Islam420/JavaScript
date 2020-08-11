@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Dom</title>
+    <style>
+        article {
+            border: 2px solid lightgray;
+            border-radius: 20px;
+            margin: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <article class="sub-container" id="first-article">
+                <h3>Exploring DOM</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat animi inventore accusantium non! At iure, soluta unde sapiente optio non excepturi quae numquam cupiditate! Esse hic magnam in? Officia, architecto!</p>
+            </article>
+
+            <article class="sub-container">
+                <h3>Exploring DOM</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat animi inventore accusantium non! At iure, soluta unde sapiente optio non excepturi quae numquam cupiditate! Esse hic magnam in? Officia, architecto!</p>
+            </article>
+            <article class="sub-container">
+                <h3>Exploring DOM</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat animi inventore accusantium non! At iure, soluta unde sapiente optio non excepturi quae numquam cupiditate! Esse hic magnam in? Officia, architecto!</p>
+            </article>
+            <article>
+                <ul id="first-list">
+                    <h3>List for Special</h3>
+                    <li>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, amet?</p>
+                    </li>
+                    <li>
+                        <p>Ducimus a pariatur consequuntur enim sunt cupiditate voluptas, sint officiis!</p>
+                    </li>
+                    <li>
+                        <p>Quae numquam est minus quo, recusandae magni laboriosam tenetur corrupti?</p>
+                    </li>
+                    <li>
+                        <p>Ullam, porro quam voluptatem at quibusdam quidem ea dolorem laborum.</p>
+                    </li>
+                    <li>
+                        <p>Dignissimos provident illo blanditiis sunt quisquam vel aspernatur ab mollitia.</p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script>
+        document.body.style.backgroundColor = 'deeppink';
+        var Container = document.getElementById('first-article');
+        Container.style.color = 'darkblue';
+        Container.style.fontSize = '20px';
+
+        var article = document.getElementById('first-article');
+        var newParagraph = document.createElement('p');
+        newParagraph.innerHTML = "Hey!I'm add from JavaScript";
+        article.appendChild(newParagraph);
+
+        var ul = document.getElementById('first-list');
+        var newListElement = document.createElement("li");
+        newListElement.innerHTML = "This list element added by JavaScript";
+        ul.appendChild(newListElement);
+    </script>
+</body>
+
+</html>

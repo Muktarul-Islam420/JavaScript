@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <h2>Welcome to our Events program</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio magnam quam tenetur, sequi enim voluptatem optio consequuntur harum non commodi corrupti veritatis culpa obcaecati id eum vero, itaque sed iure.</p>
+    <p>Sint consequuntur, nostrum ipsum est harum magnam ex pariatur placeat officiis minima recusandae corporis qui veniam tenetur accusantium quibusdam. Doloremque vel iste aspernatur! Placeat recusandae dolores cum corrupti incidunt consequatur!</p>
+    <p>Ipsum, rerum deserunt nemo atque deleniti est nihil id! Mollitia non quae eius consectetur tempora illo ut laborum ducimus dolores soluta tenetur id iste, exercitationem accusamus quos possimus voluptatem error.</p>
+
+    <button id="firstBtn">Click me -1</button>
+    <button id="secondBtn">Click me -2</button>
+    <button id="3rdBtn">Click me -3</button>
+    <button id="lastBtn">Click me -4</button>
+
+    <script>
+        function handleClick() {
+            document.body.style.backgroundColor = 'red';
+
+        }
+
+        function handleClick2() {
+            document.body.style.backgroundColor = 'deeppink';
+            document.body.style.color = 'cyan';
+        }
+        const firstButton = document.getElementById('firstBtn');
+        firstButton.onclick = handleClick2;
+        const SecondButton = document.getElementById('secondBtn');
+        SecondButton.onclick = handleClick;
+        document.getElementById('3rdBtn').addEventListener('click', function() {
+            document.body.style.color = 'blue'
+        });
+        document.getElementById('lastBtn').addEventListener('click', function() {
+            document.body.style.backgroundColor = 'cyan'
+        });
+    </script>
+</body>
+
+</html>
