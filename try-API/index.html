@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fun with API</title>
+</head>
+
+<body>
+    <h2 id="activity">Your suggestion activity..</h2>
+    <input type="text" name="">
+    <h3>To get suggestion, <a id="activity-ul" href="">click here</a></h3>
+
+    <script>
+        function SuggestActivity() {
+            fetch('http://www.boredapi.com/api/activity/')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('activity').innerText = data.activity
+                })
+        }
+        SuggestActivity();
+        setInterval(() => {
+            SuggestActivity()
+        }, 4000)
+    </script>
+</body>
+
+</html>

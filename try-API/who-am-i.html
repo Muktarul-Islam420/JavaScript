@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHo am I</title>
+</head>
+
+<body>
+
+    <h2>name</h2>
+    <h3 id="Name"></h3>
+    <div id="Picture"></div>
+    <script>
+        function Person() {
+            fetch('https://randomuser.me/api')
+                .then(res => res.json())
+                .then(data => {
+                    //var i = 10;
+                    const user = data.results[0]
+                    const userPicture = user.picture.thumbnail
+                    const Username = user.name
+                    const userFullName = `${Username.title} ${Username.first} ${Username.last}`
+                    document.getElementById('Name').innerText = userFullName
+                    document.getElementById('Picture').value = userPicture
+                })
+        }
+        Person()
+    </script>
+</body>
+
+</html>
